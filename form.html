@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Survey form</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Encuesta de satisfacción Mercado Libre</h1>
+            <p id="description" class="description text-center">Gracias por tomarte el tiempo de ayudarnos a mejorar
+                nuestra atención</p>
+        </header>
+
+        <form id="survey-form">
+
+            <div class="form-group">
+                <label for="name" id="name-label"> Nombre </label>
+                <input class="width" id="name" type="text" name="name" placeholder="Ingresa tu nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" id="email-label"> Email </label>
+                <input class="width" id="email" type="email" name="email" placeholder="Ingresa tu email" required> 
+            </div>
+
+            <div class="form-group">
+                <label for="number" id="number-label"> Edad </label>
+                <input class="width" id="number" type="number" name="age" placeholder="Ingresa tu edad" min="15" max="100" required> 
+            </div>
+
+            <div class="form-group">
+                <p> Considerando tu experiencia con nuestro servicio
+                    de atención al cliente, ¿cuál es la probabilidad de que recomiendes nuestra página a un amigo o
+                    familiar? </p>
+                <select id="dropdown" name="nps" class="form-control" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p> ¿Cómo calificarías tu experiencia general con nuestro
+                    serivicio de atención al cliente? </p>
+
+                <label>
+                    <input name="sat" value="totalmente sat" type="radio" class="input-radio" checked />Totalmente
+                    satisfactoria</label>
+
+                <label>
+                    <input name="sat" value="sat" type="radio" class="input-radio" />Satisfactoria</label>
+
+                <label>
+                    <input name="sat" value="neutra" type="radio" class="input-radio" />Neutra</label>
+
+
+                <label>
+                    <input name="sat" value="insat" type="radio" class="input-radio" />Insatisfactoria</label>
+
+                <label>
+                    <input name="sat" value="totalmente insat" type="radio" class="input-radio" />Totalmente
+                    insatisfactoria</label>
+            </div>
+
+
+            <div class="form-group">
+                <p> ¿Qué es lo que más te gusto de nuestra atención? <span class="clue">(Marca todas las que consideres
+                        que se cumplieron)</span> </p>
+
+                <label><input name="multiple" value="amabilidad" type="checkbox"
+                        class="input-checkbox" />Amabilidad</label>
+
+                <label><input name="multiple" value="rapidez" type="checkbox" class="input-checkbox" />Rapidez en la
+                    respuesta</label>
+
+                <label><input name="multiple" value="claridad" type="checkbox" class="input-checkbox" />Claridad</label>
+
+                <label><input name="multiple" value="empatia" type="checkbox" class="input-checkbox" />Empatia</label>
+
+                <label><input name="multiple" value="ninguna" type="checkbox" class="input-checkbox" />Ninguna</label>
+            </div>
+
+            <div class="form-group">
+                <p>¿Tienes algún comentario o sugerencia para nosotros? </p>
+                <textarea id="comentarios" class="input-textarea" name="comment"
+                    placeholder="Dejanos tu comentario aquí..." rows="5" cols="60"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Enviar
+                </button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
